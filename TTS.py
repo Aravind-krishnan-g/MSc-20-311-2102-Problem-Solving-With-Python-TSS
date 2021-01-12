@@ -27,7 +27,7 @@
 
 from gtts import gTTS
 import streamlit as st
-
+from PIL import Image 
 
 # ### 3. Text to speech app using streamlit
 
