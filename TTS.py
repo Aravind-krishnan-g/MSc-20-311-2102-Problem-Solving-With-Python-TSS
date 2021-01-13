@@ -41,10 +41,10 @@ url='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Google_Text_to_Sp
 image = Image.open(requests.get(url, stream=True).raw)
 exp= st.beta_expander("About")
 col1, col2,  = exp.beta_columns(2)
-col1.image(image, caption='Text To Speech (T.S.S)',use_column_width=True)
-col2.write("This web application was developed using google's T.T.S engine and streamlit gui application framework. The web app uses google's T.T.S to convert text data to audio file. The app will then read the file from the system and play it using streamlit widgets.")
-col2.write(" This project was done as a part of Msc-Problem-solving-with-python course project") 
-col2.write("You can check out the work at github: https://github.com/Aravind-krishnan-g/MSc-20-311-2102-python-project-TTS")
+col1.image(image,use_column_width=True)
+col2.write("This web application was developed using google's T.T.S engine and streamlit gui application framework. The app uses T.T.S engine to convert text data to audio file and read the file from the system for playing it using streamlit widgets.")
+col2.write(" This project was done as a part of Msc-Problem solving with python course.") 
+col2.write("You can check out the work at [github](https://github.com/Aravind-krishnan-g/MSc-20-311-2102-python-project-TTS)")
 txt=st.text_area("Enter the text to be converted into speech")
 if(txt):
     if(st.button("Convert to speech")):
