@@ -37,14 +37,15 @@ import requests
 
 
 st.title("Text To Speech (T.T.S) Web Application")
-url='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Google_Text_to_Speech_logo.svg/1200px-Google_Text_to_Speech_logo.svg.png'
-image = Image.open(requests.get(url, stream=True).raw)
+# url='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Google_Text_to_Speech_logo.svg/1200px-Google_Text_to_Speech_logo.svg.png'
+# image = Image.open(requests.get(url, stream=True).raw)
 exp= st.beta_expander("About")
-col1, col2,  = exp.beta_columns(2)
-col1.image(image,use_column_width=True)
-col2.write("This web application was developed using google's T.T.S engine and streamlit gui application framework. The app uses T.T.S engine to convert text data to audio file and read the file from the system for playing it using streamlit widgets.")
-col2.write(" This project was done as a part of Msc-Problem solving with python course.") 
-col2.write("You can check out the work at [github](https://github.com/Aravind-krishnan-g/MSc-20-311-2102-python-project-TTS)")
+# col1, col2,  = exp.beta_columns(2)
+# col1.image(image,use_column_width=True)
+exp.write("This web application was developed using google's [T.T.S engine](https://gtts.readthedocs.io/en/latest/) and [streamlit](https://docs.streamlit.io/en/stable/index.html) web application framework.")
+exp.write(" The app uses T.T.S engine to convert text data to audio file and read the file from the system for playing it using streamlit widgets.")
+exp.write(" This project was done as a part of Msc-Problem solving with python course.") 
+exp.write("You can check out the work at [github](https://github.com/Aravind-krishnan-g/MSc-20-311-2102-python-project-TTS)")
 txt=st.text_area("Enter the text to be converted into speech")
 if(txt):
     if(st.button("Convert to speech")):
